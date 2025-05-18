@@ -1,165 +1,169 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+    background-color: #f4f1eb; /* Warm beige background */
+    color: #3e2723; /* Rich Earth Brown for text */
 }
 
-.container {
-    background-color: white;
+/* Header */
+header {
+    background-color: #6d4c41; /* Warm Earth Brown */
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('https://via.placeholder.com/1600x600'); /* Replace with an earthy landscape image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    color: #3e2723; /* Dark Earth Brown for text */
+}
+
+#hero p {
+    font-size: 1.5rem;
+    color: #6d4c41; /* Muted Earth Brown for paragraph */
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #e7d7b9; /* Soft Tan */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #6d4c41; /* Warm Earth Brown */
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #3e2723; /* Rich Earth Brown */
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    background-color: #d4c7b0; /* Earthy Tan */
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #6d4c41; /* Warm Earth Brown */
+}
+
+.ceramic-card {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    background-color: #f1e6d6; /* Soft Light Tan */
+    border: 1px solid #bfae8b; /* Muted Tan Border */
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    overflow: visible;
-}
-
-h1, h2 {
-    color: #333;
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-h2 {
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-h2:nth-of-type(1) {
-    font-size: 28px; /* Increased font size for Class */
-    background-color: #f8e2f8;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.input-group input,
-.input-group select {
-    width: calc(100% - 10px);
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     box-sizing: border-box;
-    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.button-group button,
-.clear-button-group button {
-    background-color: #FF69B4;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.button-group button:hover,
-.clear-button-group button:hover {
-    background-color: #FF1493;
-}
-
-.table-container {
-    margin-top: 20px;
-}
-
-table {
+.ceramic-card img {
     width: 100%;
-    border-collapse: collapse;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ceramic-card h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    color: #6d4c41; /* Warm Earth Brown */
+}
+
+.ceramic-card p {
+    font-size: 1rem;
     margin-bottom: 20px;
-    table-layout: fixed;
+    color: #3e2723; /* Rich Earth Brown */
 }
 
-th, td {
-    text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    word-wrap: break-word;
-}
-
-th {
-    background-color: #FF69B4;
+.ceramic-card button {
+    background-color: #8d6e63; /* Muted Terracotta */
     color: white;
-}
-
-td {
-    color: #333;
-}
-
-td button {
-    background-color: #FF1493;
-    color: white;
+    padding: 10px 20px;
     border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-td button:hover {
-    background-color: #C71585;
+.ceramic-card button:hover {
+    background-color: #3e2723; /* Dark Earth Brown on Hover */
 }
 
-.summary {
-    background-color: #FFB3FF;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    color: #333;
-}
-
-.summary p {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.summary span {
-    font-weight: bold;
-}
-
-#notification {
-    background-color: #28a745;
+/* Footer */
+footer {
+    background-color: #6d4c41; /* Warm Earth Brown */
     color: white;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 20px;
     text-align: center;
-    border-radius: 5px;
 }
 
-.hidden {
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll to Top Button */
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8d6e63; /* Muted Terracotta */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 4px;
     display: none;
-}
-
-.positive {
-    color: #28a745;
-}
-
-.negative {
-    color: #dc3545;
-}
-
-h2:nth-of-type(1), h2:nth-of-type(2) {
-    background-color: #f8e2f8;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
+    cursor: pointer;
 }

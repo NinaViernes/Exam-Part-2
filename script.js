@@ -1,161 +1,55 @@
-let incomeTotal = 0;
-let materialTotal = 0;
-let toolTotal = 0;
-let firingTotal = 0;
-let shippingTotal = 0;
-let expenseTotal = 0;
+// Function to display details about a ceramic piece when clicked
+function viewCeramicDetails(ceramicName) {
+    let ceramicDetails = "";
 
-function submitIncome() {
-    const incomeAmount = document.getElementById('income-amount');
-    const amount = parseFloat(incomeAmount.value.trim());
-
-    if (isNaN(amount) || amount <= 0) {
-        alert('Please enter a valid class amount.');
-        return;
+    if (ceramicName === 'Ceramic Vase') {
+        ceramicDetails = `
+            <h3>Ceramic Vase</h3>
+            <p>This beautifully crafted vase blends modern design with rustic charm. Handcrafted with care, it adds elegance to any room.</p>
+        `;
+    } else if (ceramicName === 'Pottery Mug') {
+        ceramicDetails = `
+            <h3>Pottery Mug</h3>
+            <p>This handcrafted mug is perfect for your morning coffee or tea. Made with high-quality ceramic, it provides both style and durability.</p>
+        `;
+    } else if (ceramicName === 'Ceramic Bowl') {
+        ceramicDetails = `
+            <h3>Ceramic Bowl</h3>
+            <p>A versatile bowl perfect for soups, salads, and desserts. The handmade bowl brings a rustic, natural feel to your dining table.</p>
+        `;
     }
 
-    const description = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-
-    incomeTotal += amount;
-    expenseTotal += amount;
-    addTransaction(description, 'Class', amount);  // 'Class' is considered as Income
-    updateSummary();
-
-    incomeAmount.value = '';
+    // Display the details in a popup (alert box)
+    alert(ceramicDetails);
 }
 
-function addMaterial() {
-    const materialAmount = document.getElementById('material-amount');
-    const amount = parseFloat(materialAmount.value.trim());
-
-    if (isNaN(amount) || amount <= 0) {
-        alert('Please enter a valid material amount.');
-        return;
+// Optional: Smooth scrolling functionality (if not already included in HTML)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
+  });
+});
 
-    const description = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+// Scroll-to-top button functionality (optional)
+const topBtn = document.createElement('button');
+topBtn.id = 'topBtn';
+topBtn.title = 'Back to top';
+topBtn.textContent = '↑';
+document.body.appendChild(topBtn);
 
-    materialTotal += amount;
-    expenseTotal -= amount;  
-    addTransaction(description, 'Material', amount);  // 'Material' is considered as Expense
-    updateSummary();
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    topBtn.style.display = 'block';
+  } else {
+    topBtn.style.display = 'none';
+  }
+});
 
-    materialAmount.value = '';
-}
-
-function addTool() {
-    const toolAmount = document.getElementById('tool-amount');
-    const amount = parseFloat(toolAmount.value.trim());
-
-    if (isNaN(amount) || amount <= 0) {
-        alert('Please enter a valid tool amount.');
-        return;
-    }
-
-    const description = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-
-    toolTotal += amount;
-    expenseTotal -= amount;  
-    addTransaction(description, 'Tool', amount);  // 'Tool' is considered as Expense
-    updateSummary();
-
-    toolAmount.value = '';
-}
-
-function addFiringCost() {
-    const firingAmount = document.getElementById('firing-amount');
-    const amount = parseFloat(firingAmount.value.trim());
-
-    if (isNaN(amount) || amount <= 0) {
-        alert('Please enter a valid firing cost amount.');
-        return;
-    }
-
-    const description = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-
-    firingTotal += amount;
-    expenseTotal -= amount;  
-    addTransaction(description, 'Firing Cost', amount);  // 'Firing Cost' is considered as Expense
-    updateSummary();
-
-    firingAmount.value = '';
-}
-
-function addShippingCost() {
-    const shippingAmount = document.getElementById('shipping-amount');
-    const amount = parseFloat(shippingAmount.value.trim());
-
-    if (isNaN(amount) || amount <= 0) {
-        alert('Please enter a valid shipping amount.');
-        return;
-    }
-
-    const description = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-
-    shippingTotal += amount;
-    expenseTotal -= amount;  
-    addTransaction(description, 'Shipping', amount);  // 'Shipping' is considered as Expense
-    updateSummary();
-
-    shippingAmount.value = '';
-}
-
-function addTransaction(description, type, amount) {
-    const row = document.createElement('tr');
-
-    // If it's a "Class" transaction, we mark it as "Income" in the Type column
-    const transactionType = type === 'Class' ? 'Income' : 'Expense';
-
-    row.innerHTML = `
-        <td>${description}</td>
-        <td>${type}</td>
-        <td>${amount.toFixed(2)}</td>
-        <td>${transactionType}</td>
-        <td><button class="delete-btn">Delete</button></td>
-    `;
-
-    document.getElementById('expense-history').appendChild(row);
-
-    row.querySelector('.delete-btn').addEventListener('click', function () {
-        row.remove();
-        if (type === 'Material') {
-            materialTotal -= amount;
-        } else if (type === 'Tool') {
-            toolTotal -= amount;
-        } else if (type === 'Firing Cost') {
-            firingTotal -= amount;
-        } else if (type === 'Shipping') {
-            shippingTotal -= amount;
-        } else if (type === 'Class') {
-            incomeTotal -= amount;
-        }
-        expenseTotal += amount; 
-        updateSummary();
-    });
-}
-
-function updateSummary() {
-    document.getElementById('total-materials').textContent = materialTotal.toFixed(2);
-    document.getElementById('total-tools').textContent = toolTotal.toFixed(2);
-    document.getElementById('total-firing').textContent = firingTotal.toFixed(2);
-    document.getElementById('total-shipping').textContent = shippingTotal.toFixed(2);
-    document.getElementById('total-expenses').textContent = expenseTotal.toFixed(2);
-
-    const totalExpensesElement = document.getElementById('total-expenses');
-    if (expenseTotal >= 0) {
-        totalExpensesElement.style.color = 'green';
-    } else {
-        totalExpensesElement.style.color = 'red';
-    }
-}
-
-function clearAll() {
-    document.getElementById('expense-history').innerHTML = '';
-    incomeTotal = 0;
-    materialTotal = 0;
-    toolTotal = 0;
-    firingTotal = 0;
-    shippingTotal = 0;
-    expenseTotal = 0;
-    updateSummary();
-}
+// Scroll to top action
+topBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});

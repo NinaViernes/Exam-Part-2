@@ -3,151 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceramics Expense Tracker</title>
+    <title>Nina's Ceramics</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Ceramics Expense Tracker</h1>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Income Section Title --> 
-        <div class="section-title">
-            <h2>Income</h2>
-        </div>
+    <!-- Main content -->
+    <main>
+        <!-- Hero / Banner Section -->
+        <section id="hero">
+            <h1>Welcome to Nina's Ceramics</h1>
+            <p>Handmade pottery crafted with love and passion.</p>
+        </section>
 
-        <!-- Class Section -->
-        <div class="section">
-            <h3>Class</h3>
-            <div class="input-group">
-                <label for="income-day">Select Class Day:</label>
-                <select id="income-day">
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                    <option value="Sunday">Sunday</option>
-                </select>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Nina</h2>
+            <p>Nina is a Filipino artist who creates beautiful pottery inspired by the nature and culture of the Philippines. Her handmade pieces reflect the beauty of the land, the sea, and the traditions passed down through generations. Each piece is made with care and connects to the spirit of the Philippines, bringing a sense of its history and culture to life.</p>
+            <p>Using both traditional and modern techniques, Nina’s pottery is more than just decoration; it’s a way to feel the warmth and spirit of the Philippines in your home.</p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+
+            <!-- Ceramic Piece 1 -->
+            <div class="ceramic-card">
+                <img src="https://via.placeholder.com/300x200" alt="Ceramic Vase">
+                <h3>Ceramic Vase</h3>
+                <p>A beautifully crafted vase that blends modern design with rustic charm.</p>
             </div>
 
-            <div class="input-group">
-                <label for="income-amount">Amount ($)</label>
-                <input type="number" id="income-amount" placeholder="e.g. 100">
+            <!-- Ceramic Piece 2 -->
+            <div class="ceramic-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pottery Mug">
+                <h3>Pottery Mug</h3>
+                <p>This handcrafted mug is perfect for your morning coffee or tea.</p>
             </div>
 
-            <div class="button-group">
-                <button onclick="submitIncome()">Submit Income</button>
+            <!-- Ceramic Piece 3 -->
+            <div class="ceramic-card">
+                <img src="https://via.placeholder.com/300x200" alt="Ceramic Bowl">
+                <h3>Ceramic Bowl</h3>
+                <p>A versatile bowl perfect for soups, salads, and desserts.</p>
             </div>
-        </div>
+        </section>
+    </main>
 
-        <!-- Expense Section Title -->
-        <div class="section-title">
-            <h2>Expense</h2>
-        </div>
+    <!-- Footer with contact info -->
+    <footer id="contact">
+        <p>Contact Nina:</p>
+        <p>Email: hello@ninasceramics.com</p>
+        <p>Instagram: <a href="https://instagram.com/ninasceramics" target="_blank">@ninasceramics</a></p>
+        <p>&copy; 2025 Nina's Ceramics. All rights reserved.</p>
+    </footer>
 
-        <!-- Materials Section -->
-        <div class="section">
-            <h3>Materials</h3>
-            <div class="input-group">
-                <label for="material-description">Description</label>
-                <input type="text" id="material-description" placeholder="e.g. Clay">
-            </div>
-            <div class="input-group">
-                <label for="material-amount">Amount ($)</label>
-                <input type="number" id="material-amount" placeholder="e.g. 100">
-            </div>
-            <div class="button-group">
-                <button onclick="addMaterial()">Add Material</button>
-            </div>
-        </div>
-
-        <!-- Tools Section -->
-        <div class="section">
-            <h3>Tools & Equipment</h3>
-            <div class="input-group">
-                <label for="tool-description">Description</label>
-                <input type="text" id="tool-description" placeholder="e.g. Potter's Wheel">
-            </div>
-            <div class="input-group">
-                <label for="tool-amount">Amount ($)</label>
-                <input type="number" id="tool-amount" placeholder="e.g. 200">
-            </div>
-            <div class="button-group">
-                <button onclick="addTool()">Add Tool</button>
-            </div>
-        </div>
-
-        <!-- Firing Costs Section -->
-        <div class="section">
-            <h3>Firing Costs</h3>
-            <div class="input-group">
-                <label for="firing-description">Description</label>
-                <input type="text" id="firing-description" placeholder="e.g. Electric Kiln">
-            </div>
-            <div class="input-group">
-                <label for="firing-amount">Amount ($)</label>
-                <input type="number" id="firing-amount" placeholder="e.g. 50">
-            </div>
-            <div class="button-group">
-                <button onclick="addFiringCost()">Add Firing Cost</button>
-            </div>
-        </div>
-
-        <!-- Shipping & Packaging Section -->
-        <div class="section">
-            <h3>Shipping & Packaging</h3>
-            <div class="input-group">
-                <label for="shipping-description">Description</label>
-                <input type="text" id="shipping-description" placeholder="e.g. Packaging Materials">
-            </div>
-            <div class="input-group">
-                <label for="shipping-amount">Amount ($)</label>
-                <input type="number" id="shipping-amount" placeholder="e.g. 30">
-            </div>
-            <div class="button-group">
-                <button onclick="addShippingCost()">Add Shipping & Packaging</button>
-            </div>
-        </div>
-
-        <!-- Expense History Table -->
-        <div class="table-container">
-            <h2>Expense History</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Description</th>
-                        <th>Category</th>
-                        <th>Amount ($)</th>
-                        <th>Type</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="expense-history">
-                    <!-- Expenses will appear here -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Expense Summary -->
-        <div class="summary">
-            <h2>Expense Summary</h2>
-            <p>Total Materials: $<span id="total-materials">0</span></p>
-            <p>Total Tools & Equipment: $<span id="total-tools">0</span></p>
-            <p>Total Firing Costs: $<span id="total-firing">0</span></p>
-            <p>Total Shipping & Packaging: $<span id="total-shipping">0</span></p>
-            <p>Total Expenses: $<span id="total-expenses">0</span></p>
-        </div>
-
-        <!-- Clear All Button -->
-        <div class="clear-button-group">
-            <button onclick="clearAll()">Clear All</button>
-        </div>
-
-        <div id="notification" class="hidden"></div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
