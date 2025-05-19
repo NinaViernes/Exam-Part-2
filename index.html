@@ -39,21 +39,21 @@
             <h2>Gallery</h2>
 
             <!-- Ceramic Piece 1 -->
-            <div class="ceramic-card">
+            <div class="ceramic-card" onclick="viewCeramicDetails('Ceramic Vase')">
                 <img src="https://i.etsystatic.com/53330866/r/il/128007/6538022091/il_794xN.6538022091_130p.jpg" alt="Ceramic Vase">
                 <h3>Ceramic Vase</h3>
                 <p>A beautifully crafted vase that blends the essence of earth, vastness of the sea, wandering winds, and endless blue sky.</p>
             </div>
 
             <!-- Ceramic Piece 2 -->
-            <div class="ceramic-card">
+            <div class="ceramic-card" onclick="viewCeramicDetails('Pottery Mug')">
                 <img src="https://brewerypottery.com/cdn/shop/products/STmMugTV16.jpg?v=1594674861" alt="Pottery Mug">
                 <h3>Pottery Mug</h3>
                 <p>Rooted in the land, this handcrafted mug brings warmth to your morning ritual-whether it's coffee or tea.</p>
             </div>
 
             <!-- Ceramic Piece 3 -->
-            <div class="ceramic-card">
+            <div class="ceramic-card" onclick="viewCeramicDetails('Ceramic Bowl')">
                 <img src="https://i.etsystatic.com/34625692/r/il/8e6518/4047423576/il_570xN.4047423576_qrwf.jpg" alt="Ceramic Bowl">
                 <h3>Ceramic Bowl</h3>
                 <p>Inspired by the soft, nourishing heart of the coconut, this versatile bowl brings natural simplicity to everyday use.</p>
@@ -61,13 +61,27 @@
         </section>
     </main>
 
-    <!-- Footer with contact info -->
+    <!-- Footer with contact info and form -->
     <footer id="contact">
         <p>Pricing information is available upon request. </p>
         <p>Contact Nina:</p>
         <p>Email: hello@ninasceramics.com</p>
         <p>Phone: (012) 345-6789</p> <!-- Fake phone number -->
         <p>&copy; 2025 Nina's Ceramics. All rights reserved.</p>
+
+        <!-- Contact Form -->
+        <form id="contactForm" style="margin-top: 1em;">
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
     </footer>
 
     <script src="scripts.js"></script>
