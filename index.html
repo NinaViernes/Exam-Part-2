@@ -7,69 +7,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header with navigation -->
     <header>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#gallery">Art Pieces</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main content -->
     <main>
-        <!-- Hero / Banner Section -->
         <section id="hero">
             <h1>Welcome to Nina's Ceramics</h1>
             <p>Handmade pottery crafted with love and passion.</p>
         </section>
 
-        <!-- About Section -->
         <section id="about">
             <h2>In Her Element</h2>
             <p>Nina is an asian artist who loves to create beautiful pottery. Her works are inspired by the nature and culture of the Philippines. Her handmade pieces reflect the beauty of the land, the sea, and the traditions that have been passed down through generations. Each of her piece brings a sense of history, culture, and life. She also tries to capture the warmth and heart of her beautiful country. Her work also includes special patterns and vibrant colors that will remind you of landscapes and the depths of the blue ocean. All of Nina's pieces tells a story and a connection to her people and homeland.
             </p>
         </section>
 
-        <!-- Gallery Section -->
         <section id="gallery">
-            <h2>Gallery</h2>
+            <h2>Art Pieces</h2>
 
-            <!-- Ceramic Piece 1 -->
             <div class="ceramic-card" onclick="viewCeramicDetails('Ceramic Vase')">
-                <img src="https://i.etsystatic.com/53330866/r/il/128007/6538022091/il_794xN.6538022091_130p.jpg" alt="Ceramic Vase">
                 <h3>Ceramic Vase</h3>
                 <p>A beautifully crafted vase that blends the essence of earth, vastness of the sea, wandering winds, and endless blue sky.</p>
             </div>
 
-            <!-- Ceramic Piece 2 -->
             <div class="ceramic-card" onclick="viewCeramicDetails('Pottery Mug')">
-                <img src="https://brewerypottery.com/cdn/shop/products/STmMugTV16.jpg?v=1594674861" alt="Pottery Mug">
                 <h3>Pottery Mug</h3>
                 <p>Rooted in the land, this handcrafted mug brings warmth to your morning ritual-whether it's coffee or tea.</p>
             </div>
 
-            <!-- Ceramic Piece 3 -->
             <div class="ceramic-card" onclick="viewCeramicDetails('Ceramic Bowl')">
-                <img src="https://i.etsystatic.com/34625692/r/il/8e6518/4047423576/il_570xN.4047423576_qrwf.jpg" alt="Ceramic Bowl">
                 <h3>Ceramic Bowl</h3>
                 <p>Inspired by the soft, nourishing heart of the coconut, this versatile bowl brings natural simplicity to everyday use.</p>
             </div>
         </section>
     </main>
 
-    <!-- Footer with contact info and form -->
     <footer id="contact">
         <p>Pricing information is available upon request. </p>
         <p>Contact Nina:</p>
         <p>Email: hello@ninasceramics.com</p>
-        <p>Phone: (012) 345-6789</p> <!-- Fake phone number -->
+        <p>Phone: (012) 345-6789</p>
         <p>&copy; 2025 Nina's Ceramics. All rights reserved.</p>
 
-        <!-- Contact Form -->
         <form id="contactForm" style="margin-top: 1em;">
             <label for="firstName">First Name:</label><br>
             <input type="text" id="firstName" name="firstName" required><br><br>
