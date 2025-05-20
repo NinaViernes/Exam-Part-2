@@ -1,15 +1,13 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4e1c1; /* Light Tan Background */
-    color: #3e2a47; /* Dark Brown Text */
+    background-color: #f4e1c1;
+    color: #3e2a47;
 }
 
-/* Header */
 header {
-    background-color: #7c4e3f; /* Darker Brown */
+    background-color: #7c4e3f;
     padding: 20px 0;
     color: white;
     text-align: center;
@@ -44,9 +42,8 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Hero Section */
 #hero {
-    background-image: url('https://cdn.shopify.com/s/files/1/0836/2769/files/pottery-wheel-process_600x600.jpg?v=1601394984'); /* Replace with a hero image */
+    background-image: url('https://cdn.shopify.com/s/files/1/0836/2769/files/pottery-wheel-process_600x600.jpg?v=1601394984');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -63,7 +60,6 @@ header nav ul li a:hover {
     font-size: 1.5rem;
 }
 
-/* About Section */
 #about {
     padding: 50px 20px;
     background-color: #fff;
@@ -73,27 +69,26 @@ header nav ul li a:hover {
 #about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #7c4e3f; /* Dark Brown */
+    color: #7c4e3f;
 }
 
 #about p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
-    color: #4e342e; /* Medium Brown */
+    color: #4e342e;
 }
 
-/* Gallery Section */
 #gallery {
     padding: 50px 20px;
-    background-color: #f7e1b5; /* Light Tan */
+    background-color: #f7e1b5;
     text-align: center;
 }
 
 #gallery h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #7c4e3f; /* Dark Brown */
+    color: #7c4e3f;
 }
 
 .ceramic-card {
@@ -101,7 +96,7 @@ header nav ul li a:hover {
     width: 30%;
     margin: 10px;
     background-color: #fff;
-    border: 1px solid #e6c7a9; /* Light Tan Border */
+    border: 1px solid #e6c7a9;
     border-radius: 8px;
     padding: 20px;
     box-sizing: border-box;
@@ -111,25 +106,25 @@ header nav ul li a:hover {
 
 .ceramic-card img {
     width: 100%;
-    height: 400px; /* Set the height to 350px */
-    object-fit: cover; /* Ensures the image maintains its aspect ratio and covers the space */
+    height: 400px;
+    object-fit: cover;
     border-radius: 20px;
 }
 
 .ceramic-card h3 {
     font-size: 1.8rem;
     margin-top: 15px;
-    color: #7c4e3f; /* Dark Brown */
+    color: #7c4e3f;
 }
 
 .ceramic-card p {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #4e342e; /* Medium Brown */
+    color: #4e342e;
 }
 
 .ceramic-card button {
-    background-color: #7c4e3f; /* Dark Brown Button */
+    background-color: #7c4e3f;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -140,12 +135,11 @@ header nav ul li a:hover {
 }
 
 .ceramic-card button:hover {
-    background-color: #5a3426; /* Darker Brown on Hover */
+    background-color: #5a3426;
 }
 
-/* Footer */
 footer {
-    background-color: #7c4e3f; /* Dark Brown */
+    background-color: #7c4e3f;
     color: white;
     padding: 20px;
     text-align: center;
@@ -164,12 +158,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Scroll to Top Button */
 #topBtn {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #7c4e3f; /* Dark Brown */
+    background-color: #7c4e3f;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -180,13 +173,11 @@ footer a:hover {
     z-index: 999;
 }
 
-/* Active Link for Navigation */
 nav a.active {
     text-decoration: underline;
-    color: #a8744f; /* Tan Highlight */
+    color: #a8744f;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
