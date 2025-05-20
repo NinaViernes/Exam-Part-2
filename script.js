@@ -1,4 +1,3 @@
-// Function to display details about a ceramic piece when clicked
 function viewCeramicDetails(ceramicName) {
   let ceramicDetails = "";
 
@@ -19,11 +18,9 @@ function viewCeramicDetails(ceramicName) {
       `;
   }
 
-  // Display the details in a popup (alert box)
   alert(ceramicDetails);
 }
 
-// Smooth scrolling functionality
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 link.addEventListener('click', function (e) {
   e.preventDefault();
@@ -34,7 +31,6 @@ link.addEventListener('click', function (e) {
 });
 });
 
-// Scroll-to-top button functionality
 const topBtn = document.createElement('button');
 topBtn.id = 'topBtn';
 topBtn.title = 'Back to top';
@@ -49,12 +45,10 @@ if (window.scrollY > 300) {
 }
 });
 
-// Scroll to top action
 topBtn.addEventListener('click', () => {
 window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -64,7 +58,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
   if (firstName && lastName && message) {
       alert(`Thank you, ${firstName} ${lastName}! Your message has been sent.`);
-      this.reset(); // Clears the form
+      this.reset();
   } else {
       alert('Please fill in all fields.');
   }
