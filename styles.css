@@ -4,94 +4,93 @@ body {
     padding: 0;
     background-color: #f4e1c1;
     color: #3e2a47;
-}
-
-header {
+  }
+  
+  header {
     background-color: #7c4e3f;
     padding: 20px 0;
     color: white;
     text-align: center;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     margin: 0;
     font-size: 2.5rem;
-}
-
-header nav {
+  }
+  
+  header nav {
     margin-top: 10px;
-}
-
-header nav ul {
+  }
+  
+  header nav ul {
     list-style-type: none;
     padding: 0;
-}
-
-header nav ul li {
+  }
+  
+  header nav ul li {
     display: inline;
     margin-right: 20px;
-}
-
-header nav ul li a {
+  }
+  
+  header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-}
-
-header nav ul li a:hover {
+  }
+  
+  header nav ul li a:hover {
     text-decoration: underline;
-}
-
-#hero {
-    background-image: url('https://cdn.shopify.com/s/files/1/0836/2769/files/pottery-wheel-process_600x600.jpg?v=1601394984');
+  }
+  
+  #hero {
     background-size: cover;
     background-position: center;
     text-align: center;
     color: white;
     padding: 100px 0;
-}
-
-#hero h1 {
+  }
+  
+  #hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-}
-
-#hero p {
+  }
+  
+  #hero p {
     font-size: 1.5rem;
-}
-
-#about {
+  }
+  
+  #about {
     padding: 50px 20px;
     background-color: #fff;
     text-align: center;
-}
-
-#about h2 {
+  }
+  
+  #about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #7c4e3f;
-}
-
-#about p {
+  }
+  
+  #about p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
     color: #4e342e;
-}
-
-#gallery {
+  }
+  
+  #gallery {
     padding: 50px 20px;
     background-color: #f7e1b5;
     text-align: center;
-}
-
-#gallery h2 {
+  }
+  
+  #gallery h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #7c4e3f;
-}
-
-.ceramic-card {
+  }
+  
+  .ceramic-card {
     display: inline-block;
     width: 30%;
     margin: 10px;
@@ -102,28 +101,28 @@ header nav ul li a:hover {
     box-sizing: border-box;
     transition: transform 0.3s ease-in-out;
     text-align: center;
-}
-
-.ceramic-card img {
+  }
+  
+  .ceramic-card img {
     width: 100%;
     height: 400px;
     object-fit: cover;
     border-radius: 20px;
-}
-
-.ceramic-card h3 {
+  }
+  
+  .ceramic-card h3 {
     font-size: 1.8rem;
     margin-top: 15px;
     color: #7c4e3f;
-}
-
-.ceramic-card p {
+  }
+  
+  .ceramic-card p {
     font-size: 1rem;
     margin-bottom: 20px;
     color: #4e342e;
-}
-
-.ceramic-card button {
+  }
+  
+  .ceramic-card button {
     background-color: #7c4e3f;
     color: white;
     padding: 10px 20px;
@@ -132,33 +131,33 @@ header nav ul li a:hover {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
-}
-
-.ceramic-card button:hover {
+  }
+  
+  .ceramic-card button:hover {
     background-color: #5a3426;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #7c4e3f;
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-footer p {
+  }
+  
+  footer p {
     font-size: 1rem;
-}
-
-footer a {
+  }
+  
+  footer a {
     color: white;
     text-decoration: none;
-}
-
-footer a:hover {
+  }
+  
+  footer a:hover {
     text-decoration: underline;
-}
-
-#topBtn {
+  }
+  
+  #topBtn {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -171,33 +170,33 @@ footer a:hover {
     display: none;
     cursor: pointer;
     z-index: 999;
-}
-
-nav a.active {
+  }
+  
+  nav a.active {
     text-decoration: underline;
     color: #a8744f;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-
+  
     #hero h1 {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
-
+  
     #hero p {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-
+  
     .ceramic-card {
-        width: 90%;
-        margin: 10px auto;
+      width: 90%;
+      margin: 10px auto;
     }
-
+  
     footer p {
-        font-size: 0.9rem;
+      font-size: 0.9rem;
     }
-}
-
+  }
+  
